@@ -58,7 +58,7 @@ body {
   padding: 0 42px 0 0;
   text-decoration-line: none;
   color: #ffffff;
-  transition: .2s;
+  transition: .3s;
 }
 
 .nav__link:hover {
@@ -76,6 +76,14 @@ body {
   font-size: 24px;
   line-height: 48px;
   color: #FFFFFF;
+  cursor: pointer;
+  transition: .5s;
+}
+.button:hover {
+  background: #094550;;
+}
+.button:active {
+  background: #F2785C;
 }
 
 .button_login {
@@ -84,6 +92,10 @@ body {
   font-size: 16px;
   line-height: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+.button_login:active {
+  background:  #0D606F;
 }
 
 .button_arrow {
@@ -297,6 +309,7 @@ body {
   border: none;
   border-radius: 50%;
   background: rgba(242, 120, 92, 0.5);
+  cursor: pointer;
 }
 
 .control_center {
@@ -364,12 +377,19 @@ body {
   line-height: 24px;
   text-decoration-line: underline;
   color: #0D606F;
+  transition: .5s;
+}
+.story__link:hover {
+  color: #082f36;
+}
+.story__link:active {
+  color: #F2785C;
 }
 
 
 .footer {
   height: 60px;
-  padding: 14px 0;
+  padding: 13.5px 0;
 }
 
 .footer__wrapper {
@@ -381,6 +401,7 @@ body {
 .footer__item {
   width: 33%;
   font-size: 16px;
+  line-height: 16px;
   text-align: center;
   color: #FFFFFF;
 }
@@ -402,4 +423,11 @@ body {
 .footer__social-list {
   list-style: none;
   padding: 0;
+}
+
+.footer__social-link {
+  transition: .5s;
+}
+.footer__social-link:hover {
+  filter: drop-shadow(0px 4px 4px #042930);
 }
