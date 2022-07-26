@@ -8,31 +8,42 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/popup.css">
 </head>
 <body>
   <div class="intro">
     <header class="header">
       <div class="container">
-        <div class="header-items">
+        <div class="header__items">
           <a href="#" class="logo"><img src="assets/svg/logo.svg" alt="logo"></a>
+          <a href="#" class="logo_small"><img src="assets/svg/logo_small.svg" alt="logo"></a>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item"><a href="#preview" class="nav__link">How It Works</a></li>
               <li class="nav__item"><a href="#steps" class="nav__link">Plan Your Trip</a></li>
               <li class="nav__item"><a href="#destinations" class="nav__link">Destinations</a></li>
               <li class="nav__item"><a href="#stories" class="nav__link">Travel Stories</a></li>
+              <li class="nav__item small"><a href="#account" class="nav__link account">Account</a></li>
+              <li class="nav__item small"><a href="#social" class="nav__link">Social Media</a></li>
             </ul>
           </nav>
+
           <button class="button button_login">Login</button>
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         </div>
       </div>
     </header>
 
     <section class="preview" id="preview">
       <div class="container">
-        <h1 class="h1">Explore the beauty of<br>the World</h1>
+        <h1 class="h1">Explore the beauty&nbsp;of<br>the World</h1>
         <div class="preview__descr">Receive personalized recommendations for countries, hotels, activities and more</div>
         <form class="preview-form" action="#">
           <input class="preview-input" placeholder="What would you like to do?" type="search">
@@ -40,6 +51,7 @@
         </form>
       </div>
     </section>
+  </div>
 
   <main>
     <section class="steps" id="steps">
@@ -52,7 +64,7 @@
               <div class="steps__icon">
                 <img src="assets/svg/wishes.svg" alt="wishes" class="steps__svg">
               </div>
-              <div class="steps__subtitle">Tell us what you want to do</div>
+              <div class="steps__subtitle wishes">Tell us what you want&nbsp;to&nbsp;do</div>
             </div>
           </div>
 
@@ -61,7 +73,7 @@
               <div class="steps__icon">
               <img src="assets/svg/dates.svg" alt="dates" class="steps__svg">
               </div>
-              <div class="steps__subtitle">Share us preferable dates </div>
+              <div class="steps__subtitle">Share us preferable&nbsp;dates </div>
             </div>
           </div>
 
@@ -70,7 +82,7 @@
               <div class="steps__icon">
                 <img src="assets/svg/recommendations.svg" alt="recommendations" class="steps__svg steps__svg_recommendations">
               </div>
-              <div class="steps__subtitle">We will give you recommendations</div>
+              <div class="steps__subtitle recommendations">We will give you recommendations</div>
             </div>
           </div>
 
@@ -80,9 +92,9 @@
   
     <section class="destinations" id="destinations">
       <h2 class="title">POPULAR DESTINATIONS</h2>
-      <div class="slaider">
-        <div class="slaides">
-          <div class="slide">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide spain">
             <img src="assets/img/spain.jpg" alt="spain" class="slide__img spain">
             <div class="slide__descr">SPAIN</div>
           </div>
@@ -90,17 +102,39 @@
             <img src="assets/img/japan.jpg" alt="japan" class="slide__img japan">
             <div class="slide__descr">JAPAN</div>
           </div>
-          <div class="slide">
+          <div class="slide usa">
             <img src="assets/img/usa.jpg" alt="usa" class="slide__img usa">
             <div class="slide__descr">USA</div>
           </div>
         </div>
+        <div class="slider_small">
+          <div class="slider_small-wrapper">
+            <div class="slide_small active">
+              <img src="assets/img/spain_small.jpg" alt="spain" class="slide__img_small">
+              <div class="slide__descr_small">SPAIN</div>
+            </div>    
+  
+            <div class="slide_small">
+              <img src="assets/img/japan_small.jpg" alt="japan" class="slide__img_small">
+              <div class="slide__descr_small">JAPAN</div>
+            </div>
+  
+            <div class="slide_small">
+              <img src="assets/img/usa_small.jpg" alt="usa" class="slide__img_small">
+              <div class="slide__descr_small">USA</div>
+            </div>
+            
+            <button class="control_small control-prev"><img src="assets/svg/control_prev.svg" alt="control_prev"></button>
+            <button class="control_small control-next"><img src="assets/svg/control_next.svg" alt="control_next"></button>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="control control_left" ></div>
+          <div class=" control control_center active"></div>
+          <div class="control control_right"></div>
+        </div>        
       </div>
-      <div class="controls">
-        <div class="control control_left"></div>
-        <div class=" control control_center"></div>
-        <div class="control control_right"></div>
-      </div>
+
       <button class="button button_arrow">
         <img src="assets/svg/arrow.svg" alt="arrow">
         Find More
@@ -116,37 +150,49 @@
           <div class="stories__wrapper">
 
             <div class="story">
-              <img src="assets/img/thailand.jpg" alt="thailand" class="stories__img">
+              <div class="stories__img">
+                <img src="assets/img/thailand.jpg" alt="thailand" class="story-img">
+                <img src="assets/img/thailand_small.jpg" alt="thailand" class="story-img_small">
+              </div>
               <div class="story__descr">
                 <div class="story__subtitle">10 Photos of Attractive Thailand</div>
-                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... </div>
+                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<span> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </span><span class="min"> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>.Lorem ipsum dolor sit a<span class="min">met, consectetur adipiscing elit</span>...</div>
                 <a href="#" target="_blank" class="story__link">Read More</a>
               </div>
             </div>
 
             <div class="story">
-              <img src="assets/img/utah.jpg" alt="utah" class="stories__img">
+              <div class="stories__img">
+                <img src="assets/img/utah.jpg" alt="utah" class="story-img">
+                <img src="assets/img/utah_small.jpg" alt="utah" class="story-img_small">
+              </div>              
               <div class="story__descr">
                 <div class="story__subtitle">Canyonlands National Park, Utah</div>
-                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... </div>
+                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<span> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </span><span class="min"> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>.Lorem ipsum dolor sit a<span class="min">met, consectetur adipiscing elit</span>...</div>
                 <a href="#" target="_blank" class="story__link">Read More</a>
               </div>
             </div>
 
             <div class="story">
-              <img src="assets/img/mountains.jpg" alt="mountains" class="stories__img">
+              <div class="stories__img">
+                <img src="assets/img/mountains.jpg" alt="mountains" class="story-img">
+                <img src="assets/img/mountains_small.jpg" alt="mountains" class="story-img_small">
+              </div>              
               <div class="story__descr">
                 <div class="story__subtitle">I left my heart in the Mountains!</div>
-                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... </div>
+                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<span> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </span><span class="min"> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>.Lorem ipsum dolor sit a<span class="min">met, consectetur adipiscing elit</span>...</div>
                 <a href="#" target="_blank" class="story__link">Read More</a>
               </div>
             </div>
 
             <div class="story">
-              <img src="assets/img/journey.jpg" alt="journey" class="stories__img">
+              <div class="stories__img">
+                <img src="assets/img/journey.jpg" alt="journey" class="story-img">
+                <img src="assets/img/journey_small.jpg" alt="journey" class="story-img_small">
+              </div>              
               <div class="story__descr">
                 <div class="story__subtitle">The Longest journey in my life!</div>
-                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit... </div>
+                <div lang = "zxx" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<span> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </span><span class="min"> pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</span>.Lorem ipsum dolor sit a<span class="min">met, consectetur adipiscing elit</span>...</div>
                 <a href="#" target="_blank" class="story__link">Read More</a>
               </div>
             </div>
@@ -160,11 +206,11 @@
       
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="social">
       <div class="container">
         <div class="footer__wrapper">
-          <div class="footer__item"></div>
-          <div class="footer__item">All Rights Reserved © Travel Portal</div>
+          <div class="footer__item none"></div>
+          <div class="footer__item none">All Rights Reserved © Travel Portal</div>
           <div class="footer__item">
             <ul class="footer__social">
               <li class="footer__social-list"><a href="https://github.com/YuMentsel" target="_blank" class="footer__social-link"><img src="assets/svg/instagram.svg" alt="instagram"></a></li>
@@ -178,8 +224,41 @@
     </footer>
   </div>  
 
+  <div class="popup-overlay"></div>
+  <div class="popup">
+    <div class="popup-login active">
+      <div class="popup__subtitle">Log in to your account</div>
+      <button class="button button_popup button_facebook"><img src="assets/svg/facebook.svg" alt="arrow"><span>Sign In with Facebook</span></button>
+      <button class="button button_popup button_google"><img src="assets/svg/google.svg" alt="arrow"><span>Sign In with Google</span></button>
+      <div class="popup__or">or</div>
+      <form class="popup__form" name="signin">
+        <label for="e-mail">E-mail</label>
+        <input class="popup__input" name="email" type="email">
+        <label for="password">Password</label>
+        <input class="popup__input" name="password" type="password">
+        <button class="button button_popup" type="submit">Sign In</button>
+      </form>
+      <a href="#" class="popup__link">Forgot Your Password?</a>
+      <hr>
+      <div class="popup__toggle">Don’t have an account? <span class="register"> Register</span></div>
+    </div>
 
+    <div class="popup-signup">
+      <div class="popup__subtitle">Create account</div>
+      <form class="popup__form" name="signup">
+        <label for="e-mail">E-mail</label>
+        <input class="popup__input" name="email" type="email">
+        <label for="password">Password</label>
+        <input class="popup__input" name="password" type="password">
+        <button class="button button_popup" type="submit">Sign Up</button>
+      </form>
+      <hr>
+      <div class="popup__toggle">Already have an account? <span class="log-in"> Log&nbsp;in</span></div>
+    </div>
   </div>
+  
+
+  <script src="script.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
